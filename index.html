@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>TJPA - BIBLÍOTECA DIGITAL</title>
+  </head>
+
+  <body>
+    <!-- MODAL -->
+    <div
+      class="modal fade"
+      id="modalLogin"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalLoingTitulo"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title h4" id="modalLoingTitulo">
+              Entre na sua conta
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="loginEmail">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="loginEmail"
+                  placeholder="nome@email.com"
+                />
+              </div>
+              <div class="form-group">
+                <label for="loginSenha">Senha</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="loginSenha"
+                  placeholder="********"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Entrar na conta
+              </button>
+              <small class="form-text text-muted mt-2"
+                >Esqueceu a senha? <a href="#">Clique aqui</a>.</small
+              >
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FIM MODAL -->
+    <!-- NAVBAR -->
+    <nav
+      class="fixed-top py-3 box-shadow navbar navbar-expand-md navbar-light bg-light"
+    >
+      <a href="./index.html" class="navbar-brand">
+        <img src="./img/brasaocelular.png" alt="Caravan" />
+      </a>
+      <!-- RESPONSIVE BUTTON -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Abrir navegação"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navbarSupportedContent" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Página Inicial</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Coleções</a
+            >
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a href="#" class="dropdown-item">Audiovisual</a>
+              <a href="#" class="dropdown-item">Documentação Histórica</a>
+              <a href="#" class="dropdown-item">Doutrina</a>
+              <a href="#" class="dropdown-item">Educação Corporativa</a>
+              <a href="#" class="dropdown-item">Pronunciamentos Oficiais</a>
+              <a href="#" class="dropdown-item"
+                >Repositório de Publicações Institucionais</a
+              >
+              <a href="#" class="dropdown-item">Repositório Feminino</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Quem é quem</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Sobre o RETJPA</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a
+              href="#"
+              class="nav-link"
+              data-toggle="modal"
+              data-target="#modalLogin"
+              >Login</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="./inscricao.html" class="btn btn-outline-primary ml-md-2">
+              Inscreva-se
+            </a>
+          </li> -->
+        </ul>
+      </div>
+    </nav>
+    <!-- CAROUSEL -->
+    <!-- <section class="container-fluid">
+    <div class="row bg-dark text-white">
+
+      <div class="col-lg-7 p-0">
+        <div id="carouselCidades" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselCidades" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselCidades" data-slide-to="1"></li>
+            <li data-target="#carouselCidades" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="img/california.jpg" alt="California">
+              <div class="carousel-caption">
+                <h3 class="display-4">California</h3>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="img/paris.jpg" alt="California">
+              <div class="carousel-caption">
+                <h3 class="display-4">Paris</h3>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="img/dublin.jpg" alt="California">
+              <div class="carousel-caption">
+                <h3 class="display-4">Dublin</h3>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselCidades" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselCidades" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-5 p-4 align-self-center">
+        <h1 class="display-4">Realize a viagem do seu sonho</h1>
+        <p class="lead">O melhor local para viajar é com a Caravan, mais de
+          5.000 excursões concluídas.</p>
+        <form action="">
+          <div class="input-group input-group-lg">
+            <input type="text" class="form-control" 
+            placeholder="Email" aria-label="Email">
+            <span class="input-group-append">
+              <button class="btn btn-primary" type="button">Inscreva-se</button>
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section> -->
+
+    <!-- QUOTE -->
+    <section class="home-quote" class="p-md-5">
+      <blockquote class="blockquote text-center text-white p-md-5 p-3">   
+      </blockquote>
+        <div class="text-corpo">
+        <h2 class="mb-4 text-center text-">REDITJPA</h2>
+        <p>
+          <em>
+            O Repositório de Documentação e Informação Jurídicas (REDITJPA) visa
+            preservar e <br />
+            promover o acesso aberto à produção intelectual da área da
+            Documentação e <br />
+            Informação Jurídicas brasileira, produzida por profissionais
+            especializados na área da <br />
+            Biblioteconomia Jurídica, Arquivologia, Documentação, Ciência da
+            Informação, <br />
+            Museologia, Informática Jurídica e ciências afins.
+          </em>
+        </p>
+      </div>
+    </section>
+
+    <!-- COLEÇÕES -->
+    <section class="py-5 bg-light text-center">
+      <div class="container">
+        <div class="mb-5">
+          <h2 class="display-4 text-secondary">Coleções</h2>
+        </div>
+        <div class="row" >
+          <div class="col-xl-2 col-md-6">
+            <div class="pergunta py-2 mb-5">
+              <a
+                class="lead"
+                href="#pergunta2"
+                data-toggle="collapse"
+                data-target="#pergunta2"
+                aria-expanded="true"
+                aria-controls="pergunta2"
+              >
+                <img
+                  src="./img/icons-tjpa/alto-falante-de-audio-ligado.png"
+                  class="mb-3 mr-1"
+                />
+                <span>Audiovisual<br>&nbsp; </span>
+              </a>
+              <div
+                id="pergunta2"
+                class="collapse"
+                aria-labelledby="perguntasFrequentes"
+                data-parent="#perguntasFrequentes"
+              >
+                <a href="#"><p class="pt-3 ml-3">Galeria fotográfica</p></a>
+                <a href="#"><p class="pt-0 ml-3">Vídeos institucionais</p></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-2 col-md-6">
+            <div class="pergunta py-2 mb-5">
+              <a
+                class="lead"
+                href="#pergunta3"
+                data-toggle="collapse"
+                data-target="#pergunta3"
+                aria-expanded="true"
+                aria-controls="pergunta3"
+              >
+                <img src="./img/icons-tjpa/artigo.png" class="mb-3 mr-1" />
+                <span>Documentação <br> Histórica </span>
+              </a>
+              <div
+                id="pergunta3"
+                class="collapse"
+                aria-labelledby="perguntasFrequentes"
+                data-parent="#perguntasFrequentes"
+              >
+                <a href="#"><p class="pt-3 ml-3">Obras raras</p></a>
+                <a href="#"><p class="pt-0 ml-3">Processos históricos</p></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-2 col-md-6">
+            <div class="pergunta py-2 mb-5">
+              <a
+                class="lead"
+                href="#pergunta4"
+                data-toggle="collapse"
+                data-target="#pergunta4"
+                aria-expanded="true"
+                aria-controls="pergunta4"
+              >
+                <img
+                  src="./img/icons-tjpa/abra-o-livro.png"
+                  class="mb-3 mr-1"
+                />
+                <span>Doutrina<br>&nbsp;</span>
+              </a>
+              <div
+                id="pergunta4"
+                class="collapse"
+                aria-labelledby="perguntasFrequentes"
+                data-parent="#perguntasFrequentes"
+              >
+                <a href="#"><p class="pt-3 ml-3">Artigos científicos</p></a>
+                <a href="#"><p class="pt-0 ml-3">Artigos jurídicos</p></a>
+                <a href="#"><p class="pt-0 ml-3">Livros em geral</p></a>
+                <a href="#"><p class="pt-0 ml-3">Livros jurídicos</p></a>
+                <a href="#"><p class="pt-0 ml-3">Revistas científicas</p></a>
+                <a href="#"><p class="pt-0 ml-3">Revistas jurídica</p></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-2 col-md-6">
+            <div class="pergunta py-2 mb-5">
+              <a
+                class="lead"
+                href="#pergunta5"
+                data-toggle="collapse"
+                data-target="#pergunta5"
+                aria-expanded="true"
+                aria-controls="pergunta5"
+              >
+                <img
+                  src="./img/icons-tjpa/multidao-de-usuarios.png"
+                  class="mb-3 mr-1"
+                />
+                <span>Educação<br>Corporativa</span>
+              </a>
+              <div
+                id="pergunta5"
+                class="collapse"
+                aria-labelledby="perguntasFrequentes"
+                data-parent="#perguntasFrequentes"
+              >
+                <a href="#"><p class="pt-3 ml-3">Auditoria e controle</p></a>
+                <a href="#"><p class="pt-0 ml-3">Comunicação social</p></a>
+                <a href="#"><p class="pt-0 ml-3">Direito</p></a>
+                <a href="#"><p class="pt-0 ml-3">Documentação</p></a>
+                <a href="#"><p class="pt-0 ml-3">Gestão de pessoas</p></a>
+                <a href="#"><p class="pt-0 ml-3">Gestão estratégica</p></a>
+                <a href="#"><p class="pt-0 ml-3">Gestão pública</p></a>
+                <a href="#"><p class="pt-0 ml-3">Licitações e contratos</p></a>
+                <a href="#"><p class="pt-0 ml-3">Orçamento e finanças</p></a>
+                <a href="#"
+                  ><p class="pt-0 ml-3">
+                    Produção intelectual de magistrados
+                  </p></a
+                >
+                <a href="#"
+                  ><p class="pt-0 ml-3">
+                    Produção intelectual de servidores
+                  </p></a
+                >
+                <a href="#"
+                  ><p class="pt-0 ml-3">Saúde e qualidade de vida</p></a
+                >
+                <a href="#"
+                  ><p class="pt-0 ml-3">Tecnologia da informação</p></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-2 col-md-6">
+            <div class="pergunta py-2 mb-5">
+              <a
+                class="lead"
+                href="#pergunta6"
+                data-toggle="collapse"
+                data-target="#pergunta6"
+                aria-expanded="true"
+                aria-controls="pergunta6"
+              >
+                <img src="./img/icons-tjpa/entrevista.png" class="mb-3 mr-1" />
+                <span>Pronunciamentos Oficiais</span>
+              </a>
+              <div
+                id="pergunta6"
+                class="collapse"
+                aria-labelledby="perguntasFrequentes"
+                data-parent="#perguntasFrequentes"
+              >
+                <a href="#"><p class="pt-3 ml-3">Discursos de posse</p></a>
+                <a href="#"><p class="pt-0 ml-3">Entrevistas</p></a>
+                <a href="#"><p class="pt-0 ml-3">Pronunciamentos solenes</p></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-2 col-md-6">
+            <div class="pergunta py-2 mb-5">
+              <a
+                class="lead"
+                href="#pergunta7"
+                data-toggle="collapse"
+                data-target="#pergunta7"
+                aria-expanded="true"
+                aria-controls="pergunta7"
+              >
+                <img
+                  src="./img/icons-tjpa/relatorio-de-lucro.png"
+                  class="mb-3 mr-1"
+                />
+                <span>Repositório de Publicações Institucionais</span>
+              </a>
+              <div
+                id="pergunta7"
+                class="collapse"
+                aria-labelledby="perguntasFrequentes"
+                data-parent="#perguntasFrequentes"
+              >
+                <a href="#"
+                  ><p class="pt-3 ml-3">Informativos institucionais</p></a
+                >
+                <a href="#"
+                  ><p class="pt-0 ml-3">Planos e projetos institucionais</p></a
+                >
+                <a href="#"><p class="pt-0 ml-3">Publicações em geral</p></a>
+                <a href="#"><p class="pt-0 ml-3">Publicações jurídicas</p></a>
+                <a href="#"><p class="pt-0 ml-3">Regulamentos</p></a>
+                <a href="#"><p class="pt-0 ml-3">Relatórios de gestão</p></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-2 col-md-6">
+            <div class="pergunta py-2">
+              <a
+                class="lead"
+                href="#pergunta8"
+                data-toggle="collapse"
+                data-target="#pergunta8"
+                aria-expanded="true"
+                aria-controls="pergunta8"
+              >
+                <img src="./img/icons-tjpa/juiz.png" class="mb-3 mr-1" />
+                <span>Repositório Feminino</span>
+              </a>
+              <div
+                id="pergunta8"
+                class="collapse"
+                aria-labelledby="perguntasFrequentes"
+                data-parent="#perguntasFrequentes"
+              >
+                <a href="#"><p class="pt-2 ml-3">Galeria fotográfica</p></a>
+                <a href="#"><p class="pt-0 ml-3">Vídeos institucionais</p></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+        <div class="col-xl-4 col-md-6">
+          <div style="height: 100px;" class="d-flex justify-content-center">
+            <img src="./img/icons/passaporte.svg" alt="passaporte">
+          </div>
+          <h3>Documentos</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div> -->
+
+    <!-- PERGUNTAS -->
+    <!-- <section class="container">
+      <div class="my-5 text-center">
+        <span class="h6 d-block">Nossas</span>
+        <h2 class="display-4 text-primary">Coleções</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6" id="perguntasFrequentes">
+          <div class="dropdown-divider d-flex justify-content-center"></div>
+          <div class="pergunta py-2">
+            <a
+              class="lead"
+              href="#pergunta2"
+              data-toggle="collapse"
+              data-target="#pergunta2"
+              aria-expanded="true"
+              aria-controls="pergunta2"
+            >
+              → Audiovisual
+            </a>
+            <div
+              id="pergunta2"
+              class="collapse"
+              aria-labelledby="perguntasFrequentes"
+              data-parent="#perguntasFrequentes"
+            >
+              <a href="#"><p class="pt-3 ml-3">Galeria fotográfica</p></a>
+              <a href="#"><p class="pt-0 ml-3">Vídeos institucionais</p></a>
+            </div>
+          </div>
+
+          <div class="dropdown-divider d-flex justify-content-center"></div>
+          <div class="pergunta py-2">
+            <a
+              class="lead"
+              href="#pergunta3"
+              data-toggle="collapse"
+              data-target="#pergunta3"
+              aria-expanded="true"
+              aria-controls="pergunta3"
+            >
+              → Documentação Histórica
+            </a>
+            <div
+              id="pergunta3"
+              class="collapse"
+              aria-labelledby="perguntasFrequentes"
+              data-parent="#perguntasFrequentes"
+            >
+              <a href="#"><p class="pt-3 ml-3">Obras raras</p></a>
+              <a href="#"><p class="pt-0 ml-3">Processos históricos</p></a>
+            </div>
+          </div>
+
+          <div class="dropdown-divider d-flex justify-content-center"></div>
+          <div class="pergunta py-2">
+            <a
+              class="lead"
+              href="#pergunta4"
+              data-toggle="collapse"
+              data-target="#pergunta4"
+              aria-expanded="true"
+              aria-controls="pergunta4"
+            >
+              → Doutrina
+            </a>
+            <div
+              id="pergunta4"
+              class="collapse"
+              aria-labelledby="perguntasFrequentes"
+              data-parent="#perguntasFrequentes"
+            >
+              <a href="#"><p class="pt-3 ml-3">Artigos científicos</p></a>
+              <a href="#"><p class="pt-0 ml-3">Artigos jurídicos</p></a>
+              <a href="#"><p class="pt-0 ml-3">Livros em geral</p></a>
+              <a href="#"><p class="pt-0 ml-3">Livros jurídicos</p></a>
+              <a href="#"><p class="pt-0 ml-3">Revistas científicas</p></a>
+              <a href="#"><p class="pt-0 ml-3">Revistas jurídica</p></a>
+            </div>
+          </div>
+          <div class="dropdown-divider d-flex justify-content-center"></div>
+          <div class="pergunta py-2">
+            <a
+              class="lead"
+              href="#pergunta5"
+              data-toggle="collapse"
+              data-target="#pergunta5"
+              aria-expanded="true"
+              aria-controls="pergunta5"
+            >
+              → Educação Corporativa
+            </a>
+            <div
+              id="pergunta5"
+              class="collapse"
+              aria-labelledby="perguntasFrequentes"
+              data-parent="#perguntasFrequentes"
+            >
+              <a href="#"><p class="pt-3 ml-3">Auditoria e controle</p></a>
+              <a href="#"><p class="pt-0 ml-3">Comunicação social</p></a>
+              <a href="#"><p class="pt-0 ml-3">Direito</p></a>
+              <a href="#"><p class="pt-0 ml-3">Documentação</p></a>
+              <a href="#"><p class="pt-0 ml-3">Gestão de pessoas</p></a>
+              <a href="#"><p class="pt-0 ml-3">Gestão estratégica</p></a>
+              <a href="#"><p class="pt-0 ml-3">Gestão pública</p></a>
+              <a href="#"><p class="pt-0 ml-3">Licitações e contratos</p></a>
+              <a href="#"><p class="pt-0 ml-3">Orçamento e finanças</p></a>
+              <a href="#"
+                ><p class="pt-0 ml-3">Produção intelectual de magistrados</p></a
+              >
+              <a href="#"
+                ><p class="pt-0 ml-3">Produção intelectual de servidores</p></a
+              >
+              <a href="#"><p class="pt-0 ml-3">Saúde e qualidade de vida</p></a>
+              <a href="#"><p class="pt-0 ml-3">Tecnologia da informação</p></a>
+            </div>
+          </div>
+
+          <div class="dropdown-divider d-flex justify-content-center"></div>
+          <div class="pergunta py-2">
+            <a
+              class="lead"
+              href="#pergunta6"
+              data-toggle="collapse"
+              data-target="#pergunta6"
+              aria-expanded="true"
+              aria-controls="pergunta6"
+            >
+              → Pronunciamentos Oficiais
+            </a>
+            <div
+              id="pergunta6"
+              class="collapse"
+              aria-labelledby="perguntasFrequentes"
+              data-parent="#perguntasFrequentes"
+            >
+              <a href="#"><p class="pt-3 ml-3">Discursos de posse</p></a>
+              <a href="#"><p class="pt-0 ml-3">Entrevistas</p></a>
+              <a href="#"><p class="pt-0 ml-3">Pronunciamentos solenes</p></a>
+            </div>
+          </div>
+
+          <div class="dropdown-divider d-flex justify-content-center"></div>
+          <div class="pergunta py-2">
+            <a
+              class="lead"
+              href="#pergunta7"
+              data-toggle="collapse"
+              data-target="#pergunta7"
+              aria-expanded="true"
+              aria-controls="pergunta7"
+            >
+              → Repositório de Publicações Institucionais
+            </a>
+            <div
+              id="pergunta7"
+              class="collapse"
+              aria-labelledby="perguntasFrequentes"
+              data-parent="#perguntasFrequentes"
+            >
+              <a href="#"
+                ><p class="pt-3 ml-3">Informativos institucionais</p></a
+              >
+              <a href="#"
+                ><p class="pt-0 ml-3">Planos e projetos institucionais</p></a
+              >
+              <a href="#"><p class="pt-0 ml-3">Publicações em geral</p></a>
+              <a href="#"><p class="pt-0 ml-3">Publicações jurídicas</p></a>
+              <a href="#"><p class="pt-0 ml-3">Regulamentos</p></a>
+              <a href="#"><p class="pt-0 ml-3">Relatórios de gestão</p></a>
+            </div>
+          </div>
+
+          <div class="dropdown-divider d-flex justify-content-center"></div>
+          <div class="pergunta py-2">
+            <a
+              class="lead"
+              href="#pergunta8"
+              data-toggle="collapse"
+              data-target="#pergunta8"
+              aria-expanded="true"
+              aria-controls="pergunta8"
+            >
+              → Repositório Feminino
+            </a>
+            <div
+              id="pergunta8"
+              class="collapse"
+              aria-labelledby="perguntasFrequentes"
+              data-parent="#perguntasFrequentes"
+            >
+              <a href="#"><p class="pt-2 ml-3">Galeria fotográfica</p></a>
+              <a href="#"><p class="pt-0 ml-3">Vídeos institucionais</p></a>
+            </div>
+          </div>
+
+          <div class="dropdown-divider"></div>
+        </div>
+      </div>
+    </section> -->
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white">
+      <div class="container py-4">
+        <div class="row">
+          <div class="col-md-3 col-6">
+            <h4 class="h6">PÁGINAS</h4>
+            <ul class="list-unstyled">
+              <li><a href="#">Página Inicial</a></li>
+              <li><a href="#">Coleções</a></li>
+              <li><a href="#">Quem é quem</a></li>
+              <li><a href="#">Sobre o RETJPA</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-6">
+            <h4 class="h6">COLEÇÕES</h4>
+            <ul class="list-unstyled">
+              <li><a href="#">Audiovisual</a></li>
+              <li><a href="#">Documentação Histórica</a></li>
+              <li><a href="#">Doutrina</a></li>
+              <li><a href="#">Educação Corporativa</a></li>
+              <li><a href="#">Pronuciamento Oficiais</a></li>
+              <li><a href="#">Repositório de Publicações Institucionais</a></li>
+              <li><a href="#">Repositório Feminino</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h4 class="h6">DADOS DE CONTATO</h4>
+            <ul class="list-unstyled text-secondary">
+              <li>bibliotecadigital@tjpa.com.br</li>
+              <li>11 99999-8888</li>
+            </ul>
+          </div>
+          <!-- <div class="col-md-2">
+          <h4 class="h6">REDES SOCIAIS</h4>
+          <ul class="list-unstyled">
+            <li><a href="#" class="btn btn-sm btn-outline-secondary mb-2 btn-block" style="max-width: 140px;">Facebook</a></li>
+            <li><a href="#" class="btn btn-sm btn-outline-secondary mb-2 btn-block" style="max-width: 140px;">Twitter</a></li>
+            <li><a href="#" class="btn btn-sm btn-outline-secondary btn-block" style="max-width: 140px;">YouTube</a></li>
+          </ul>
+        </div> -->
+        </div>
+      </div>
+      <div class="bg-primary text-center py-3">
+        <p class="mb-0">
+          <!-- Javascript traz o ano atual -->
+          TJPA &copy; <span id="ano-atual"></span> Alguns direitos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="./js/jquery-3.2.1.slim.min.js"></script>
+    <script type="text/javascript" src="./js/popper.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
+  </body>
+</html>

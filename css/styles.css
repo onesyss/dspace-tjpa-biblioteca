@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2? family= Playfair+Display:ital,wght@0,400;1,900 & display=swap');
+
+body {
+  padding-top: 75px;
+}
+
+.box-shadow {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05), 0 4px 8px 0 rgba(0, 0, 0, 0.05);
+}
+
+.home-quote {
+  background: url("./../img/lady-justice-677945_1920.jpg") center center;
+  background-size: cover;
+  height: 500px;
+}
+
+.blockquote {
+  position: absolute;
+  background-color: rgba(255, 0, 0, 0.57);
+  transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+  opacity: 0.38;
+  height: 500px;
+  width: 100%;
+  z-index: 10;
+}
+
+.text-corpo {
+  position: absolute; 
+  z-index: 100 !important; 
+  color: white !important;
+  margin-left: 50px;
+  margin-top: 60px;
+}
+
+.text-corpo p, h2 {
+  font-weight: 800;
+  
+}
+
+.text-corpo h2 {
+  text-align: center;
+}
+
+.home-quote p {
+  font-size: 16px;
+  text-align: justify;
+  /* text-align: center; */
+  color: #ffffff !important;
+  font-family: "Poppins", Sans-serif;
+  line-height: 1.9em;
+  flex-wrap: wrap;
+  z-index: 100 !important;
+}
+
+.home-quote h2 {
+  margin-top: 65px;
+  text-align: justify;
+  letter-spacing: 2px;
+  line-height: 1.5em;
+  font-family: 'Playfair Display', serif;
+}
+
+#home-quote p {
+  margin-top: 80px;
+}
+
+.lista-plano li {
+  padding: 1rem;
+}
+
+.lista-plano li + li {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 767px) {
+  body {
+    padding: 0;
+  }
+  .fixed-top {
+    position: relative;
+  }
+  #home-quote .display-4 {
+    font-size: 2.5rem;
+  }
+}
+
+footer a {
+  color: #a3a3a3;
+}
+
+.pergunta a {
+  color: #2b3d61;
+  margin-left: auto;
+  font-size: 12px;
+  text-align: left;
+
+}
+
+.pergunta span {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.pergunta {
+  background-color: rgb(216, 216, 216);
+  border-radius: 0.3em;
+
+  
+}
+
+.pergunta img {
+  text-align: left;
+  height: 20px;
+  margin-top: 12px;
+}
+
+.col-xl-2 {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.pergunta, .lead {
+  margin-bottom: 160px ;
+}
+
+.collapse {
+  color: bisque;
+  
+  
+}
