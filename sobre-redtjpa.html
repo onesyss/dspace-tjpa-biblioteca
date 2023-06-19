@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>TJPA - BIBLÍOTECA DIGITAL</title>
+  </head>
+
+  <body>
+    <!-- MODAL -->
+    <div
+      class="modal fade"
+      id="modalLogin"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalLoingTitulo"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title h4" id="modalLoingTitulo">
+              Entre na sua conta
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="loginEmail">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="loginEmail"
+                  placeholder="nome@email.com"
+                />
+              </div>
+              <div class="form-group">
+                <label for="loginSenha">Senha</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="loginSenha"
+                  placeholder="********"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Entrar na conta
+              </button>
+              <small class="form-text text-muted mt-2"
+                >Esqueceu a senha? <a href="#">Clique aqui</a>.</small
+              >
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FIM MODAL -->
+    <!-- NAVBAR -->
+    <nav
+      class="fixed-top py-3 box-shadow navbar navbar-expand-md navbar-light bg-light"
+    >
+      <a href="./index.html" class="navbar-brand">
+        <img src="./img/brasaocelular.png" alt="Caravan" />
+      </a>
+      <!-- RESPONSIVE BUTTON -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Abrir navegação"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navbarSupportedContent" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Página Inicial</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Coleções</a
+            >
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a href="#" class="dropdown-item">Audiovisual</a>
+              <a href="#" class="dropdown-item">Documentação Histórica</a>
+              <a href="#" class="dropdown-item">Doutrina</a>
+              <a href="#" class="dropdown-item">Educação Corporativa</a>
+              <a href="#" class="dropdown-item">Pronunciamentos Oficiais</a>
+              <a href="#" class="dropdown-item"
+                >Repositório de Publicações Institucionais</a
+              >
+              <a href="#" class="dropdown-item">Repositório Feminino</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Quem é quem</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Sobre o RETJPA</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a
+              href="#"
+              class="nav-link"
+              data-toggle="modal"
+              data-target="#modalLogin"
+              >Login</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="./inscricao.html" class="btn btn-outline-primary ml-md-2">
+              Inscreva-se
+            </a>
+          </li> -->
+        </ul>
+      </div>
+    </nav>
+    <!-- CAROUSEL -->
+    <!-- <section class="container-fluid">
+    <div class="row bg-dark text-white">
+
+      <div class="col-lg-7 p-0">
+        <div id="carouselCidades" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselCidades" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselCidades" data-slide-to="1"></li>
+            <li data-target="#carouselCidades" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="img/california.jpg" alt="California">
+              <div class="carousel-caption">
+                <h3 class="display-4">California</h3>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="img/paris.jpg" alt="California">
+              <div class="carousel-caption">
+                <h3 class="display-4">Paris</h3>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="img/dublin.jpg" alt="California">
+              <div class="carousel-caption">
+                <h3 class="display-4">Dublin</h3>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselCidades" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselCidades" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-5 p-4 align-self-center">
+        <h1 class="display-4">Realize a viagem do seu sonho</h1>
+        <p class="lead">O melhor local para viajar é com a Caravan, mais de
+          5.000 excursões concluídas.</p>
+        <form action="">
+          <div class="input-group input-group-lg">
+            <input type="text" class="form-control" 
+            placeholder="Email" aria-label="Email">
+            <span class="input-group-append">
+              <button class="btn btn-primary" type="button">Inscreva-se</button>
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section> -->
+
+    <!-- QUOTE -->
+    <section class="home-quote" class="p-md-5">
+      <!-- <blockquote
+        class="blockquote text-center text-white p-md-5 p-3"
+      ></blockquote> -->
+      <div class="text-corpo">
+        <h2 class="mb-4 text-center">REDITJPA</h2>
+        <p style="background-color: rgb(228, 228, 228); opacity: 0.7;">
+          <em>
+            O REDIJ é de acesso aberto e gratuito, desenvolvido por meio de 
+            plataforma de software livre e com capacidade de integração com 
+            sistemas nacionais e internacionais, observando-se o uso de 
+            padrões e protocolos de integração, em especial, aqueles 
+            definidos no modelo Open Archives.
+          </em>
+        </p>
+      </div>
+    </section>
+
+    <!-- COLEÇÕES -->
+    <section class="py-5 bg-light">
+      <div class="demo">
+        <div class="container">
+          <div class="row">
+            <div class="text-center">
+              <div id="testimonial-slider" class="owl-carousel">
+                <div class="testimonial mt-5 ml-5">
+                  <div class="pic">
+                    <img src="./img/icons-tjpa/Edilenice-1.jpg" />
+                  </div>
+                  <h3 class="title">DEPOIMENTO</h3>
+                  <span class="post"
+                    >Edilenice Passos - Coordenadora do Grupo de trabalho
+                    Repositório digital do REDIJ</span
+                  >
+                  <p class="description font-italic">
+                    “Meu envolvimento com a Biblioteconomia Jurídica vai
+                    perdurar. Alguns projetos antigos vão continuar e novos
+                    estão surgindo".
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-5 sobre">
+        <div>
+          <div>
+            <h2>POLÍTICAS E OBJETIVOS</h2>
+          </div>
+          <div class="texto-secao2 mt-5 text-justify">
+            <p>
+              O Repositório de Documentação e Informação Jurídicas (REDIJ) visa
+              preservar promover o acesso aberto à produção intelectual da área
+              da Documentação e Informação Jurídicas, produzida por brasileiros
+              publicada no Brasil ou exterior e por estrangeiros publicada no
+              Brasil.
+            </p>
+            <p class="mt-5">
+              Considera-se produção intelectual toda e qualquer produção técnica
+              ou científica, seja publicada em meio impresso ou digital.
+            </p>
+            <p class="mt-5">
+              O REDIJ é de acesso aberto e gratuito, desenvolvido por meio de
+              plataforma de software livre e com capacidade de integração com
+              sistemas nacionais e internacionais, observando-se o uso de
+              padrões e protocolos de integração, em especial, aqueles definidos
+              no modelo Open Archives.
+            </p>
+
+            <div class="objetivo-text mb-5 mt-5">
+              <p class="font-weight-light">
+                O REDIJ tem como objetivos: 
+              </p>
+              <p class="mt-4">
+                I – possibilitar o registro, a preservação e a disseminação da produção intelectual da área de Documentação e Informação Jurídicas;
+              </p>
+              <p>
+                II – fomentar o acesso aberto à produção acadêmica dos profissionais que trabalham com a informação jurídica;
+              </p>
+              <p>
+                III – ampliar a visibilidade da literatura da área de Documentação e Informação Jurídicas brasileira;
+              </p>
+              <p>
+                IV – disseminar a produção acadêmica, tornando-a fonte permanente de consulta e base para o desenvolvimento de novas pesquisas;
+              </p>
+              <p>
+                V – incentivar o intercâmbio entre pesquisadores e grupos de pesquisa sobre informação jurídica do Brasil e do exterior.
+              </p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white">
+      <div class="container py-4">
+        <div class="row">
+          <div class="col-md-3 col-6">
+            <h4 class="h6">PÁGINAS</h4>
+            <ul class="list-unstyled">
+              <li><a href="./index.html">Página Inicial</a></li>
+              <li><a href="#">Coleções</a></li>
+              <li><a href="#">Quem é quem</a></li>
+              <li><a href="#">Sobre o RETJPA</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-6">
+            <h4 class="h6">COLEÇÕES</h4>
+            <ul class="list-unstyled">
+              <li><a href="#">Audiovisual</a></li>
+              <li><a href="#">Documentação Histórica</a></li>
+              <li><a href="#">Doutrina</a></li>
+              <li><a href="#">Educação Corporativa</a></li>
+              <li><a href="#">Pronuciamento Oficiais</a></li>
+              <li><a href="#">Repositório de Publicações Institucionais</a></li>
+              <li><a href="#">Repositório Feminino</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h4 class="h6">DADOS DE CONTATO</h4>
+            <ul class="list-unstyled text-secondary">
+              <li>bibliotecadigital@tjpa.com.br</li>
+              <li>11 99999-8888</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="bg-primary text-center py-3">
+        <p class="mb-0">
+          <!-- Javascript traz o ano atual -->
+          TJPA &copy; <span id="ano-atual"></span> Alguns direitos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="./js/jquery-3.2.1.slim.min.js"></script>
+    <script type="text/javascript" src="./js/popper.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
+  </body>
+</html>

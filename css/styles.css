@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2? family= Playfair+Display:ital,wght@0,400;1,900 & display=swap');
+@import url("https://fonts.googleapis.com/css2? family= Playfair+Display:ital,wght@0,400;1,900 & display=swap");
 
 body {
   padding-top: 75px;
@@ -14,6 +14,12 @@ body {
   height: 500px;
 }
 
+.home-quote2 {
+  background: url("/img/Posse-GIDJ.jpg") center center;
+  background-size: cover;
+  height: 500px;
+}
+
 .blockquote {
   position: absolute;
   background-color: rgba(255, 0, 0, 0.57);
@@ -25,16 +31,16 @@ body {
 }
 
 .text-corpo {
-  position: absolute; 
-  z-index: 100 !important; 
+  position: absolute;
+  z-index: 100 !important;
   color: white !important;
   margin-left: 50px;
   margin-top: 60px;
 }
 
-.text-corpo p, h2 {
+.text-corpo p,
+h2 {
   font-weight: 800;
-  
 }
 
 .text-corpo h2 {
@@ -57,7 +63,7 @@ body {
   text-align: justify;
   letter-spacing: 2px;
   line-height: 1.5em;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
 }
 
 #home-quote p {
@@ -93,19 +99,17 @@ footer a {
   margin-left: auto;
   font-size: 12px;
   text-align: left;
-
 }
 
 .pergunta span {
   font-size: 13px;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .pergunta {
   background-color: rgb(216, 216, 216);
   border-radius: 0.3em;
-
-  
 }
 
 .pergunta img {
@@ -119,12 +123,99 @@ footer a {
   padding-left: 5px;
 }
 
-.pergunta, .lead {
-  margin-bottom: 160px ;
+.pergunta,
+.lead {
+  margin-bottom: 160px;
 }
 
 .collapse {
   color: bisque;
-  
-  
+}
+
+.collapse p {
+  font-size: 15px;
+}
+
+/* Section Depoimentos Inicio */
+
+.testimonial {
+  padding: 40px 65px;
+  margin: 0 20px 30px;
+  border-radius: 0 70px 0 70px;
+  border: 5px solid #f1cf81;
+  border-left: none;
+  border-right: none;
+  text-align: center;
+}
+
+/* .demo {
+  background: #3d3d3d;
+} */
+
+.testimonial {
+  padding: 40px 65px;
+  margin: 0 20px 30px;
+  border-radius: 0 70px 0 70px;
+  border: 5px solid #ffd77a;
+  border-left: none;
+  border-right: none;
+  text-align: center;
+}
+
+.testimonial .pic {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.testimonial .pic img {
+  width: 100%;
+  height: auto;
+}
+
+.testimonial .title {
+  display: block;
+  margin: 0 0 7px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffd87c;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.testimonial .post {
+  display: block;
+  font-size: 10px;
+  color: #868686;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.testimonial .description {
+  font-size: 16px;
+  color: #414141;
+  line-height: 30px;
+}
+.owl-theme .owl-controls {
+  margin-top: 0;
+}
+.owl-theme .owl-controls .owl-page span {
+  background: #fff;
+  opacity: 0.8;
+  transition: all 0.3s ease 0s;
+}
+.owl-theme .owl-controls .owl-page.active span {
+  background: #ffc33c;
+}
+
+.texto-secao2 p {
+  font-size: 17px;
+  line-height: 1.8em;
+}
+
+.sobre {
+  padding: 50px 90px;
 }
