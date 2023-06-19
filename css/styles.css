@@ -44,19 +44,45 @@ h2 {
 }
 
 .text-corpo h2 {
-  text-align: center;
+  padding-left: 19%;
 }
 
+.text-corpo p {
+  padding-left: 50%;
+  font-size: 17px;
+  font-weight: 400;
+  text-align: center;
+  position: relative;
+  left: -50%;
+}
+
+@media (max-width: 767px) {
+  .text-corpo p {
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+    position: relative;
+    top: -140px;
+    left: -40%;
+  }
+  .text-corpo h2 {
+    font-size: 30px;
+    position:absolute;
+    top: -25%;
+    left: -5%;
+  }
+
+}
+/* 
 .home-quote p {
   font-size: 16px;
   text-align: justify;
-  /* text-align: center; */
   color: #ffffff !important;
   font-family: "Poppins", Sans-serif;
   line-height: 1.9em;
   flex-wrap: wrap;
   z-index: 100 !important;
-}
+} */
 
 .home-quote h2 {
   margin-top: 65px;
@@ -181,7 +207,7 @@ footer a {
   margin: 0 0 7px 0;
   font-size: 20px;
   font-weight: 600;
-  color: #ffd87c;
+  color: #fabe30;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -217,5 +243,5 @@ footer a {
 }
 
 .sobre {
-  padding: 50px 90px;
+  padding: 20px 90px;
 }
