@@ -365,28 +365,38 @@ form:hover .fa {
   background-color: #6852528a;
   opacity: 0.9;
   top: 32%;
-  left: 15%;
+  left: 14%;
   text-align: center;
   
 }
 
 .elementor-divider {
-  text-align: center;
   width: 10%;
   padding-top: 25px;
-  padding-bottom: 25px;
+  padding-bottom: 20px;
+  margin-left: 45%;
   border-top: var(--divider-border-width) var(--divider-border-style) var(--divider-color);
   --divider-border-style: solid;
-  --divider-color: #cc2e72;
+  --divider-color: #ffc33c;
   --divider-border-width: 5px;
-  
 }
 
-.elementor-divider-separater {
+.elementor-divider1 {
+  width: 10%;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  /* margin-left: 5%; */
+  border-top: var(--divider-border-width) var(--divider-border-style) var(--divider-color);
+  --divider-border-style: solid;
+  --divider-color: #ffc33c;
+  --divider-border-width: 5px;
+}
+
+/* .elementor-divider-separater {
   text-align: center;
   margin: 0 auto;
 
-}
+} */
 
 /* .sobre-text-corpo p {
   font-size: 18px;
