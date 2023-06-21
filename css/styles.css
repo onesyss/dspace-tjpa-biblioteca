@@ -11,7 +11,7 @@ body {
 .home-quote {
   background: url("./../img/lady-justice-677945_1920.jpg") center center;
   background-size: cover;
-  height: 500px;
+  height: 600px;
 }
 
 /* .cards-corpo-collapse, .container {
@@ -21,7 +21,7 @@ body {
 .home-quote2 {
   background: url("/img/Posse-GIDJ.jpg") center center;
   background-size: cover;
-  height: 500px;
+  height: 600px;
 }
 
 .blockquote {
@@ -29,7 +29,7 @@ body {
   background-color: rgba(255, 0, 0, 0.57);
   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
   opacity: 0.38;
-  height: 500px;
+  height: 600px;
   width: 100%;
   z-index: 10;
 }
@@ -69,14 +69,13 @@ h2 {
     text-align: center;
     font-size: 12px;
     font-weight: 300;
-    position:relative;
+    position: relative;
     top: 50px;
     left: -50px;
-  
   }
 
   .text-corpo em {
-    width: 100px
+    width: 100px;
   }
 }
 
@@ -121,6 +120,7 @@ footer a {
   /* margin-left: auto; */
   font-size: 12px;
   text-align: left;
+  text-transform: uppercase;
 }
 
 .pergunta span {
@@ -137,7 +137,6 @@ footer a {
 .pergunta img {
   width: 65px;
   /* margin-left: 10px; */
-
 }
 
 /* .col-xl-1 {
@@ -145,7 +144,6 @@ footer a {
   border: 1px solid rgb(224, 6, 6);
   
 } */
-
 
 form {
   position: relative;
@@ -167,7 +165,6 @@ input {
   top: 0;
   left: 0;
   width: 100%;
-  ;
   height: 42.5px;
   line-height: 30px;
   outline: 0;
@@ -218,7 +215,7 @@ form:hover .fa {
   text-align: center;
   display: block;
   margin-inline: 5px;
-  /* font-size: 10px; */
+  text-transform: uppercase;
   font-weight: 900;
 }
 
@@ -326,7 +323,7 @@ form:hover .fa {
 }
 
 .sobre {
-  padding: 20px 90px;
+  padding: 10px 10px;
 }
 
 .searchInput {
@@ -343,38 +340,92 @@ form:hover .fa {
   width: 150px;
 }
 
+.home-sobre {
+  background: url("../img/imagem-teste.jpg") center center;
+  background-size: cover;
+  height: 650px;
+}
+
+.painel-page-sobre {
+  position: absolute;
+  background-color: rgba(255, 0, 0, 0.57);
+  transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+  opacity: 0.38;
+  height: 650px;
+  width: 100%;
+  z-index: 10;
+}
+
 .sobre-text-corpo {
   position: absolute;
   z-index: 100 !important;
   color: white !important;
-  width: 80%;
+  width: 70%;
   height: 40%;
-  background-color: #6852528A;
+  background-color: #6852528a;
   opacity: 0.9;
-  top: 50%;
-  left: 10%;
-  /* padding: 10% 50%; */
+  top: 32%;
+  left: 15%;
+  text-align: center;
+  
 }
 
-.sobre-text-corpo p,
-h2 {
-  font-weight: 800;
+.elementor-divider {
+  text-align: center;
+  width: 10%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-top: var(--divider-border-width) var(--divider-border-style) var(--divider-color);
+  --divider-border-style: solid;
+  --divider-color: #cc2e72;
+  --divider-border-width: 5px;
+  
+}
+
+.elementor-divider-separater {
+  text-align: center;
+  margin: 0 auto;
+
+}
+
+/* .sobre-text-corpo p {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
 }
 
 .sobre-text-corpo h1 {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+} */
+
+
+/* .sobre-text-corpo h1 {
   text-align: center;
   font-weight: 700;
-  position: absolute;
-  top: -40%;
+  position: relative;
+  top: -30%;
   left: 40%;
 }
 
 .sobre-text-corpo p {
   text-align: center;
-  margin: 3% 30%;
-  font-size: 17px;
+  margin: -1% 30%;
+  font-size: 18px;
   font-weight: 500;
-}
+} */
+
+/* @media screen and (min-width: 200px) and (max-width: 1200px) {
+  .sobre-text-corpo {
+    position: absolute;
+    width: 70%;
+    height: 60%;
+    background-color: #6852528a;
+    top: 32%;
+    left: 15%;
+  }
+} */
 
 /* @media (max-width: 767px) {
   .sobre-text-corpo h2 {
