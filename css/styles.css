@@ -52,6 +52,7 @@ h2 {
 }
 
 .text-corpo p {
+  text-align: justify;
   padding-right: 50%;
   font-size: 17px;
   font-weight: 400;
@@ -65,6 +66,7 @@ h2 {
     left: -70px;
   }
   .text-corpo p {
+    text-align: center;
     font-size: 12px;
     font-weight: 300;
     position:relative;
@@ -77,16 +79,6 @@ h2 {
     width: 100px
   }
 }
-/* 
-.home-quote p {
-  font-size: 16px;
-  text-align: justify;
-  color: #ffffff !important;
-  font-family: "Poppins", Sans-serif;
-  line-height: 1.9em;
-  flex-wrap: wrap;
-  z-index: 100 !important;
-} */
 
 .home-quote h2 {
   margin-top: 65px;
@@ -350,3 +342,58 @@ form:hover .fa {
 .card-collapse {
   width: 150px;
 }
+
+.sobre-text-corpo {
+  position: absolute;
+  z-index: 100 !important;
+  color: white !important;
+  width: 80%;
+  height: 40%;
+  background-color: #6852528A;
+  opacity: 0.9;
+  top: 50%;
+  left: 10%;
+  /* padding: 10% 50%; */
+}
+
+.sobre-text-corpo p,
+h2 {
+  font-weight: 800;
+}
+
+.sobre-text-corpo h1 {
+  text-align: center;
+  font-weight: 700;
+  position: absolute;
+  top: -40%;
+  left: 40%;
+}
+
+.sobre-text-corpo p {
+  text-align: center;
+  margin: 3% 30%;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+/* @media (max-width: 767px) {
+  .sobre-text-corpo h2 {
+    font-size: 30px;
+    position: absolute;
+    top: -90px;
+    left: -70px;
+  }
+  .sobre-text-corpo p {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 300;
+    position:relative;
+    top: 50px;
+    left: -50px;
+  
+  }
+
+  .sobre-text-corpo em {
+    width: 100px
+  }
+} */
